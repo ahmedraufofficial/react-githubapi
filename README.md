@@ -3,7 +3,7 @@
 ## Steps to run the code
 
 1) Clone the Github Repo
-2) cd into **React Assesment**
+2) cd into **react-githubapi**
 3) Run the **redis server**
    ######  *Open Terminal*
    ######  *cd /cache/redis-6.2.6/src*
@@ -18,9 +18,12 @@
 
 
 ## API
-*Access [Swagger Api Documentation](https://localhost:5000/api-docs)*
-*https://localhost:5000/api/clear-cache to clear redis cache*
-*https://localhost:5000/api/search with query params to get users/ repositories*
+   ###### *Access [Swagger Api Documentation](https://localhost:5000/api-docs)*
+   ###### *https://localhost:5000/api/clear-cache to clear redis cache*
+   ###### *https://localhost:5000/api/search with query params to get users/ repositories*
 
-## Other
-*Click red button to clear cache*
+## Working
+   ###### *Click red button to clear cache*
+   ###### *Type in search to get results*
+   ###### *Choose either User or Repository from dropdown*
+
