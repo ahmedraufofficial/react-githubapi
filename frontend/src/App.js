@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import DataFetching from './components/DataFetching';
 
 function App() {

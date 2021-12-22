@@ -4,7 +4,7 @@ const https = require('https');
 const { Octokit } = require("@octokit/core");
 const Redis = require('ioredis');
 const client = Redis.createClient();
-
+const octokit = new Octokit({});
 
 /**
  * @swagger
@@ -55,7 +55,7 @@ router.get('/search',async function(req,res){
         return
     }
 
-    const octokit = new Octokit({ auth: `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` });
+    
     var obj = []
     if (p == "user"){
         const result = await octokit.request('GET /search/users', {
@@ -104,7 +104,7 @@ router.get('/search',async function(req,res){
             obj.push(repos);
         }
     }
-    client.set(q+'@'+p,JSON.stringify(obj),'ex', 100)
+    client.set(q+'@'+p,JSON.stringify(obj),'ex', 7200)
     console.log('Added -> Cache ', q+'@'+p)
     res.send(obj)
 })

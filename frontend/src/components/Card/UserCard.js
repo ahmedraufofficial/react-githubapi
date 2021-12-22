@@ -6,7 +6,7 @@ export default function UserCard({ id,user_url,username,score,site_admin, user_i
 
         <div className='Card'>
             <div className='card_inner'>
-            <img src={user_img} className='image'/>
+            <img src={user_img} alt="No Profile Img" className='image'/>
 
             <h4 className='repo'>{username}</h4>
             <h4 className='real_name'>ID: {id}</h4>

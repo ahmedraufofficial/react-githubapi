@@ -19,10 +19,9 @@ export default function DataFetching() {
     const dispatch = useDispatch();
     const [search_, setSearch] = useState(searchData);
     const [purpose_, setPurpose] = useState(purposeData);
-    var loading = document.getElementById("loading");
 
     useEffect(() => {
-        if (searchData == ""){
+        if (searchData === ""){
             document.getElementById("header").style.marginTop = "40vh";
         }
         else { document.getElementById("header").style.marginTop = "3vh"; }
@@ -46,12 +45,14 @@ export default function DataFetching() {
             .then((err) => {console.log(err);
                 document.getElementById("loading").style.display = "none"})
         }
+        return
     }
     
     getFiltereddata = _.debounce(getFiltereddata, 500)
 
     getFiltereddata(search_, purpose_);
   
+    
 
     function clearcache(){
         axios.get ('http://localhost:5000/api/clear-cache')
@@ -69,7 +70,7 @@ export default function DataFetching() {
 
 
             <div className="header" id="header">
-            <img src="github.png"/>
+            <img src="github.png" alt="Github"/>
             <div>
             <h4>Github Searcher</h4>
             <p>Search users or repositories below</p>

@@ -6,7 +6,7 @@ export default function RepoCard({ repo_url, repo, desc, star, watch, language, 
 
         <div className='Card'>
             <div className='card_inner'>
-            <img src={owner_img} className='image'/>
+            <img src={owner_img} alt="No Profile Img" className='image'/>
 
             <h4 className='repo'>{repo}</h4>
 

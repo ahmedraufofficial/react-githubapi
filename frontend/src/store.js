@@ -14,4 +14,6 @@ export const myStore = createStore(
 
 export const persistor = persistStore(myStore);
 
-export default { myStore, persistor };
+const store_all = { myStore, persistor }
+
+export default store_all;
